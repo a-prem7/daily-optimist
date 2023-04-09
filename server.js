@@ -5,6 +5,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const Blog = require('./models/blogs');
 const PORT = 3000;
 const methodOverride = require('method-override');
 // Dependencies 
@@ -26,9 +27,55 @@ app.use(methodOverride("_method"))
 
 
 // I 
-app.get('/blogs', (req, res) => {
-    res.send('index.ejs')
+
+app.get('/blogs', async (req, res) => {
+    const allBlogs = await Blog.find({})
+    res.render('index.ejs', {
+        blogs: allBlogs
+    }
+    );
+  }); 
+// New
+
+app.get('/blogs/new', (req, res) => {
+    res.render('new.ejs')
+
 })
+
+
+// Delete
+
+
+
+// Update
+
+
+
+
+// Create
+app.post('/blogs', (req,res) => {
+
+    const createdBlog = new Blog(req.body)
+    createdBlog.save().then(res.redirect('/blogs'))
+    
+  })
+
+
+
+// Edit
+
+
+
+// Show
+
+app.get('/blogs/:id', async (req, res) => {
+    const foundBlog = await Blog.findById(req.params.id).exec()
+    res.render('show.ejs', {
+        blog: foundBlog,
+    });
+  }); 
+  
+
 
 
 
