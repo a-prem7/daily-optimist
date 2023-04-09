@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+
+        <title>The Daily Optimist</title>
+    </head>
+<body>
+    <h1 style="text-align: center;">The Daily Optimist</h1>
+<nav>
+    <button class="addnew-btn"><a href="/blogs/new">Add a New Post</a></button>
+</nav>
+    
+            <div class="container">      
+                   
+            <% blogs.forEach(blog => { %>
+                <div class="card">
+              <a href="/blog/<%=blog._id %>"><h2><%=blog.title%></h2></a>
+                <a href="/blog/<%=blog._id %>"> 
+                    <img src=<%=blog.img%>/></a>
+                <p> $<%=blog.body%></p>     
+                <p> $<%=blog.topic%></p>  
+                <p> $<%=blog.duration%></p>          
+                </div>
+            <% }) %>
+                 
+         </div>
+</body>
+</html>
