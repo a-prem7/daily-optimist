@@ -18,12 +18,14 @@
                    
             <% blogs.forEach(blog => { %>
                 <div class="card">
-              <a href="/blog/<%=blog._id %>"><h2><%=blog.title%></h2></a>
-                <a href="/blog/<%=blog._id %>"> 
+              <a href="/blogs/<%=blog._id %>"><h2><%=blog.title%></h2></a>
+                <a href="/blogs/<%=blog._id %>"> 
                     <img src=<%=blog.img%>/></a>
                 <p> <%=blog.description%>...</p>     
                 <p> <%=blog.topic%></p>  
-                <p> <%=blog.duration%> min read</p>          
+                <p> <%=blog.duration%> min read</p>  
+                <p> - <%=blog.author%></p>    
+                ---------------------------------------------------------       
                 </div>
             <% }) %>
                  

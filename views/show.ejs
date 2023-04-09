@@ -7,7 +7,7 @@
     <title>Show Page</title>
 </head>
 <body>
-    nav>
+    <nav>
         <button><a href="/blogs">Back to Main Page</a></button>
     </nav>
 
@@ -19,6 +19,18 @@
         <p>Description: <%= blog.description%>
         </p>
         <p><%= blog.body%></p>
+        <p> - <%= blog.author%></p>
+
+
+        <button class="edit-btn"><a href="/blogs/<%=blog._id %>/edit">Edit</a></button>
+        <br>
+        <br>
+
+        <section>
+            <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete Post" />
+            </form>
+        </section>
        
 </body>
 </html>

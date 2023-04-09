@@ -44,12 +44,24 @@ app.get('/blogs/new', (req, res) => {
 
 
 // Delete
+app.delete('/blogs/:id', async (req, res) => {
+ 
+    await Blog.findByIdAndDelete(req.params.id);
+
+  res.redirect("/blogs")
+})
 
 
 
 // Update
 
-
+app.put('/blogs/:id', async (req, res) => {
+    await Blog.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+    );
+    res.redirect(`/blogs/${req.params.id}`)
+  });
 
 
 // Create
@@ -64,6 +76,13 @@ app.post('/blogs', (req,res) => {
 
 // Edit
 
+app.get("/blogs/:id/edit",async (req, res) => {
+    const foundBlog = await Blog.findById(req.params.id).exec();
+        res.render("edit.ejs", {
+            blog: foundBlog,
+        })
+    })
+  
 
 
 // Show
