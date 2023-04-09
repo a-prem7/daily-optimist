@@ -26,74 +26,11 @@ app.use(methodOverride("_method"))
 
 
 
-// I 
 
-app.get('/blogs', async (req, res) => {
-    const allBlogs = await Blog.find({})
-    res.render('index.ejs', {
-        blogs: allBlogs
-    }
-    );
-  }); 
-// New
+// Routes / Controllers 
+const blogsController = require('./controllers/blogs');
+app.use('/blogs',blogsController);
 
-app.get('/blogs/new', (req, res) => {
-    res.render('new.ejs')
-
-})
-
-
-// Delete
-app.delete('/blogs/:id', async (req, res) => {
- 
-    await Blog.findByIdAndDelete(req.params.id);
-
-  res.redirect("/blogs")
-})
-
-
-
-// Update
-
-app.put('/blogs/:id', async (req, res) => {
-    await Blog.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-    );
-    res.redirect(`/blogs/${req.params.id}`)
-  });
-
-
-// Create
-app.post('/blogs', (req,res) => {
-
-    const createdBlog = new Blog(req.body)
-    createdBlog.save().then(res.redirect('/blogs'))
-    
-  })
-
-
-
-// Edit
-
-app.get("/blogs/:id/edit",async (req, res) => {
-    const foundBlog = await Blog.findById(req.params.id).exec();
-        res.render("edit.ejs", {
-            blog: foundBlog,
-        })
-    })
-  
-
-
-// Show
-
-app.get('/blogs/:id', async (req, res) => {
-    const foundBlog = await Blog.findById(req.params.id).exec()
-    res.render('show.ejs', {
-        blog: foundBlog,
-    });
-  }); 
-  
 
 
 
