@@ -8,7 +8,7 @@ const Blog = require('../models/blogs');
 
 // I 
 
-blogRouter.get('/blogs', async (req, res) => {
+blogRouter.get('/', async (req, res) => {
     const allBlogs = await Blog.find({})
     res.render('index.ejs', {
         blogs: allBlogs
@@ -17,14 +17,14 @@ blogRouter.get('/blogs', async (req, res) => {
   }); 
 // New
 
-blogRouter.get('/blogs/new', (req, res) => {
+blogRouter.get('/new', (req, res) => {
     res.render('new.ejs')
 
 })
 
 
 // Delete
-blogRouter.delete('/blogs/:id', async (req, res) => {
+blogRouter.delete('/:id', async (req, res) => {
  
     await Blog.findByIdAndDelete(req.params.id);
 
@@ -32,20 +32,18 @@ blogRouter.delete('/blogs/:id', async (req, res) => {
 })
 
 
-
 // Update
 
-blogRouter.put('/blogs/:id', async (req, res) => {
+blogRouter.put('/:id', async (req, res) => {
     await Blog.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-    );
-    res.redirect(`/blogs/${req.params.id}`)
+        req.params.id,req.body);
+    // Blog[req.params.id] = req.body
+    res.redirect('/blogs')
   });
 
 
 // Create
-blogRouter.post('/blogs', (req,res) => {
+blogRouter.post('/', (req,res) => {
 
     const createdBlog = new Blog(req.body)
     createdBlog.save().then(res.redirect('/blogs'))
@@ -53,10 +51,9 @@ blogRouter.post('/blogs', (req,res) => {
   })
 
 
-
 // Edit
 
-blogRouter.get("/blogs/:id/edit",async (req, res) => {
+blogRouter.get("/:id/edit",async (req, res) => {
     const foundBlog = await Blog.findById(req.params.id).exec();
         res.render("edit.ejs", {
             blog: foundBlog,
@@ -67,17 +64,12 @@ blogRouter.get("/blogs/:id/edit",async (req, res) => {
 
 // Show
 
-blogRouter.get('/blogs/:id', async (req, res) => {
+blogRouter.get('/:id', async (req, res) => {
     const foundBlog = await Blog.findById(req.params.id).exec()
     res.render('show.ejs', {
         blog: foundBlog,
     });
   }); 
   
-
-
-
-
-
 
 module.exports = blogRouter;
