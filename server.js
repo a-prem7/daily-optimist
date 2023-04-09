@@ -30,7 +30,7 @@ const blogsController = require('./controllers/blogs');
 app.use('/blogs',blogsController);
 
 
-
+app.use(express.static('public'))
 
 
 app.listen(PORT, () => console.log(`server is listning on port: ${PORT}`));
