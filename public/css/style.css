@@ -7,6 +7,7 @@ h1 {
 
 nav {
     text-align: left;
+    padding: 0 0 0 80px;
 }
 
 h2 {
@@ -26,8 +27,12 @@ a:link {
     margin-bottom: 10px; /* Added */
 }
 
-.btn-primary {
+.show-card {
+    text-align: center;
+}
+button.btn.btn-warning {
     --button-color: black;
+   
    
 }
 
@@ -85,4 +90,9 @@ a:link {
 p.duration {
     float: right;
     padding: 0 500px 0 0;
+}
+
+.show-img {
+    width: 400px;
+    height: 400px;
 }

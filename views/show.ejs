@@ -8,12 +8,12 @@
     <nav>
         <button><a href="/blogs">Back to Main Page</a></button>
     </nav>
-
+    <div class="container">
     <div class="show-card">
         <h1>
             <%= blog.title%>
         </h1>
-        <img src=<%=blog.img%>/>
+        <img class="show-img" src=<%=blog.img%>/>
         <p>Description: <%= blog.description%>
         </p>
         <p><%= blog.body%></p>
@@ -29,7 +29,9 @@
                 <input type="submit" value="Delete Post" />
             </form>
         </section>
-       
+        </div>
+       <br>
+       <br>
  <%- include('./partials/footer.ejs')%>
 </body>
 </html>
