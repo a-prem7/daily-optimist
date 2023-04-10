@@ -28,7 +28,7 @@ blogRouter.delete('/:id', async (req, res) => {
  
     await Blog.findByIdAndDelete(req.params.id);
 
-  res.redirect("/blogs")
+  res.redirect("/")
 })
 
 
@@ -38,7 +38,7 @@ blogRouter.put('/:id', async (req, res) => {
     await Blog.findByIdAndUpdate(
         req.params.id,req.body);
     // Blog[req.params.id] = req.body
-    res.redirect('/blogs')
+    res.redirect('/')
   });
 
 
@@ -46,7 +46,7 @@ blogRouter.put('/:id', async (req, res) => {
 blogRouter.post('/', (req,res) => {
 
     const createdBlog = new Blog(req.body)
-    createdBlog.save().then(res.redirect('/blogs'))
+    createdBlog.save().then(res.redirect('/'))
     
   })
 

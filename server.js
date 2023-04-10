@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes / Controllers 
 const blogsController = require('./controllers/blogs');
-app.use('/blogs',blogsController);
+app.use('/',blogsController);
 
 
 app.use(express.static('public'))
