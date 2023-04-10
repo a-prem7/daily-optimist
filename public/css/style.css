@@ -6,7 +6,7 @@ h1 {
 }
 
 nav {
-    text-align: right;
+    text-align: left;
 }
 
 h2 {
@@ -29,4 +29,60 @@ a:link {
 .btn-primary {
     --button-color: black;
    
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: blue;
+    color: white;
+  }
+
+  .fa-pinterest{
+    background: red;
+    color: white;
+  }
+ 
+  footer {
+    text-align: center;
+  }
+
+ p.topic {
+    display: inline;
+    float: center;
+    padding: 0 0px 0 400px;
+    font-style: italic;
+  
+ 
+}
+p.duration {
+    float: right;
+    padding: 0 500px 0 0;
 }
