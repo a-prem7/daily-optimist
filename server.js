@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-const PORT = 3000;
+
 const methodOverride = require("method-override")
 // Dependencies 
 mongoose.connect(process.env.DATABASE_URL);
@@ -33,4 +33,4 @@ app.use('/blogs',blogsController);
 app.use(express.static('public'))
 
 
-app.listen(PORT, () => console.log(`server is listning on port: ${PORT}`));
+app.listen(process.env.PORT || 3000, () => console.log(`server is listning on port: ${process.env.PORT}`));
