@@ -24,7 +24,7 @@ blogRouter.get('/new', (req, res) => {
 
 
 // Delete
-blogRouter.delete('/:id', async (req, res) => {
+blogRouter.delete('/blogs/:id', async (req, res) => {
  
     await Blog.findByIdAndDelete(req.params.id);
 
@@ -34,7 +34,7 @@ blogRouter.delete('/:id', async (req, res) => {
 
 // Update
 
-blogRouter.put('/:id', async (req, res) => {
+blogRouter.put('/blogs/:id', async (req, res) => {
     await Blog.findByIdAndUpdate(
         req.params.id,req.body);
     // Blog[req.params.id] = req.body
@@ -43,7 +43,7 @@ blogRouter.put('/:id', async (req, res) => {
 
 
 // Create
-blogRouter.post('/', (req,res) => {
+blogRouter.post('/blogs', (req,res) => {
 
     const createdBlog = new Blog(req.body)
     createdBlog.save().then(res.redirect('/'))
@@ -53,7 +53,7 @@ blogRouter.post('/', (req,res) => {
 
 // Edit
 
-blogRouter.get("/:id/edit",async (req, res) => {
+blogRouter.get("/blogs/:id/edit",async (req, res) => {
     const foundBlog = await Blog.findById(req.params.id).exec();
         res.render("edit.ejs", {
             blog: foundBlog,
@@ -64,7 +64,7 @@ blogRouter.get("/:id/edit",async (req, res) => {
 
 // Show
 
-blogRouter.get('/:id', async (req, res) => {
+blogRouter.get('/blogs/:id', async (req, res) => {
     const foundBlog = await Blog.findById(req.params.id).exec()
     res.render('show.ejs', {
         blog: foundBlog,
