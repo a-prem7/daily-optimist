@@ -1,10 +1,17 @@
 
-
+body {
+    background-image: url("https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  
+}
 
 h1 {
     font-family: Snell Roundhand, cursive;
-    font-size: 50px;
-    padding: 50px 0 0 0;
+    font-size: 40px;
+    padding: 0 0 0 100px;
+    font-weight: bolder;
+    color: rgb(81, 79, 79);
+    animation: glow 1s ease-in-out infinite alternate;
+    
 }
 
 nav {
@@ -25,6 +32,9 @@ a:link {
 
 .container-sm {
     text-align: center;
+    padding: 100px 0 0 0 ;
+    opacity: 0.9;
+    
 }
 
 .card {
@@ -35,11 +45,32 @@ a:link {
 
 .show-card {
     text-align: center;
+    font-weight: bold;
 }
 .btn-warning {
     color: black;
-    
 }
+
+.container-new {
+    text-align: center;
+    font-weight: bolder;
+}
+.card-new {
+    padding: 90px 0 0 0 ;
+    font-weight: bolder;
+}
+
+
+.container-edit {
+    text-align: center;
+    font-weight: bolder;
+}
+.card-edit{
+    padding: 90px 0 0 0 ;
+    font-weight: bolder;
+}
+
+
 .delete-btn {
     color: red;
 }
@@ -100,19 +131,24 @@ a:link {
     float: center;
     padding: 0 0px 0 400px;
     font-style: italic;
+    color: grey;
   
 }
 p.duration {
     float: right;
     padding: 0 500px 0 0;
+    
 }
 
+p.author {
+    font-weight: bold;
+}
 .show-img {
     width: 300px;
     height: 300px;
 }
 
-#text-body {
+.text-body {
     resize: none;
     height: 100px;
     width: 350px;

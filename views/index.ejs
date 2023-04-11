@@ -5,7 +5,7 @@
  <%- include('./partials/head.ejs')%>
     </head>
 <body>
-    <h1 style="text-align: center;">The Daily Optimist</h1>
+    <!-- <h1 style="text-align: center;">The Daily Optimist</h1> -->
     
     
     <br>
@@ -14,6 +14,7 @@
 </nav> -->
 <nav class="navbar fixed-top navbar-light bg-light">
     <button type="button" class="btn btn-warning"><a href="/new">Add Post</a></button>
+    <h1 style="text-align: center;">The Daily Optimist <span class="glyphicon">&#x231b;</span>  </h1> 
     <input type="text" placeholder="Search..">
   </nav>
     <!-- <button type="button" class="btn btn-warning"><a href="/new">Add Post</a></button> -->
@@ -22,17 +23,19 @@
   </div>
 
             <div class="container-sm">      
-                   
+               
             <% blogs.forEach(blog => { %>
                 <div class="card">
               <a href="/blogs/<%=blog._id %>"><h2><%=blog.title%></h2></a>
+              <br>
                 <a href="/blogs/<%=blog._id %>"> 
                     <img src=<%=blog.img%>/></a>
+                    <br>
                 <p> <%=blog.description%>...</p>     
                 <div><p class="topic"> <%=blog.topic%></p>  
                 <p class="duration"> <%=blog.duration%> min read</p></div>
-                <p> - <%=blog.author%></p>    
-                ---------------------------------------------------------       
+                <p class="author"> - <%=blog.author%></p>    
+                  ==========================================================
                 </div>
             <% }) %>
                  
