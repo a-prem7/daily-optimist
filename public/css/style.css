@@ -8,7 +8,7 @@ h1 {
     font-family: Snell Roundhand, cursive;
     font-size: 40px;
     padding: 0 0 0 100px;
-    font-weight: bolder;
+    font-weight:900;
     color: rgb(81, 79, 79);
     animation: glow 1s ease-in-out infinite alternate;
     
@@ -70,9 +70,13 @@ a:link {
     font-weight: bolder;
 }
 
+.addpost-btn {
+    background-color:rgb(183, 179, 107);
+}
 
 .delete-btn {
-    color: red;
+    color: black;
+    background-color: rgb(241, 63, 63);
 }
 .topnav input[type=text] {
     float: right;
@@ -131,7 +135,8 @@ a:link {
     float: center;
     padding: 0 0px 0 400px;
     font-style: italic;
-    color: grey;
+    color: rgb(112, 110, 110);
+   
   
 }
 p.duration {
