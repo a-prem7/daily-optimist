@@ -4,13 +4,15 @@
 h1 {
     font-family: Snell Roundhand, cursive;
     font-size: 50px;
-    padding: 30px 0 0 0;
+    padding: 50px 0 0 0;
 }
 
 nav {
     text-align: left;
     padding: 0 0 0 80px;
 }
+
+
 
 h2 {
     color: black;
@@ -34,12 +36,22 @@ a:link {
 .show-card {
     text-align: center;
 }
-button.btn.btn-warning {
-    --button-color: black;
-   
-   
+.btn-warning {
+    color: black;
+    
 }
-
+.delete-btn {
+    color: red;
+}
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+  
 /* Style all font awesome icons */
 .fa {
     padding: 10px;
@@ -96,8 +108,8 @@ p.duration {
 }
 
 .show-img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
 }
 
 #text-body {

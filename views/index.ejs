@@ -9,10 +9,18 @@
     
     
     <br>
-<nav>
-    <button type="button" class="btn btn-warning"><a href="/new">+</a></button>
-</nav>
+<!-- <nav>
+    <button type="button" class="btn btn-warning"><a href="/new">Add Post</a></button>
+</nav> -->
+<nav class="navbar fixed-top navbar-light bg-light">
+    <button type="button" class="btn btn-warning"><a href="/new">Add Post</a></button>
+    <input type="text" placeholder="Search..">
+  </nav>
+    <!-- <button type="button" class="btn btn-warning"><a href="/new">Add Post</a></button> -->
+   
     
+  </div>
+
             <div class="container-sm">      
                    
             <% blogs.forEach(blog => { %>
@@ -31,5 +39,8 @@
          </div>
 
  <%- include('./partials/footer.ejs')%>
+
+
 </body>
+
 </html>
