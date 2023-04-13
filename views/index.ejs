@@ -13,8 +13,10 @@
     <button type="button" class="btn btn-warning"><a href="/new">Add Post</a></button>
 </nav> -->
 <nav class="navbar fixed-top navbar-light bg-light">
-    <button type="button" class="btn btn-warning"><a href="/new">Add Post</a></button>
-    <h1 style="text-align: center;">The Daily Optimist <span class="glyphicon">&#x231b;</span>  </h1> 
+  <br>
+    <button class="btn btn-secondary" type="button" ><a href="/new"><span class="glyphicon">&#x270f;</span></a></button>
+    <h1 class="main-heading" style="text-align: center;">The Daily Optimist </h1> <br>
+    <h5> Register/Login</h5><br>
     <input type="text" placeholder="Search..">
   </nav>
     <!-- <button type="button" class="btn btn-warning"><a href="/new">Add Post</a></button> -->
@@ -26,7 +28,7 @@
                
             <% blogs.forEach(blog => { %>
                 <div class="card">
-              <a href="/blogs/<%=blog._id %>"><h2><%=blog.title%></h2></a>
+              <a href="/blogs/<%=blog._id %>"><h2><%=blog.title%> </h2></a>
               <br>
                 <a href="/blogs/<%=blog._id %>"> 
                     <img src=<%=blog.img%>/></a>
