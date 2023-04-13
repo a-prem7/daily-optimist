@@ -9,7 +9,7 @@ The Daily Optimist is a blog app designed to inspire and motivate users to live 
 * JavaScript
 * Express
 * Node.js
-* Mongo DB/Mongoose
+* MongoDB/Mongoose
 * EJS
 * Bootstrap
 
@@ -23,5 +23,6 @@ The Daily Optimist is a blog app designed to inspire and motivate users to live 
 
 ## Future Enhancements
 * Add Authentication and Authorization
+* Create a Community section where Users can connect with like-minded individuals, share their own experiences, and provide support and encouragement to others
 
 
