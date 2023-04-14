@@ -16,7 +16,7 @@ The Daily Optimist is a blog app designed to inspire and motivate users to live 
 
 ## Screenshot 
 
-![Screenshot](Screenshot%202023-04-13%20at%208.54.43%20PM.png)
+![Screenshot](Screenshot%202023-04-13%20at%209.15.38%20PM.png)
 
 ## Getting Started
  [Click Here](https://daily-optimist.herokuapp.com/) to see the deployed app in action!
