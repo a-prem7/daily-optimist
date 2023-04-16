@@ -202,10 +202,11 @@ p.author {
     }
     .main-heading {
         text-align: left;
-        padding: 0 20px 0 10px ;
+        padding: 0 60px 0 10px;
+        font-size: 30px;
     }
     h1{
-        padding: 0 20px 0 0 ;
+        padding: 0 30px 0 0 ;
 
     }
     p.duration {
