@@ -189,7 +189,40 @@ p.author {
     width: 350px;
 } 
 
+@media (min-width: 300px) {
 
+    p.topic {
+        display: block;
+        float: center;
+        padding: 0 40px 0 30px;
+        font-style: italic; 
+      
+    }
+    .navbar-fixed-top {
+        padding: 0 0 100px 0px;
+    }
+    .container-sm {
+        text-align: center;
+       padding: 100px 0 0 0;
+        opacity: 0.9;  
+    }
+    
+    .main-heading {
+        text-align: left;
+        padding: 0 30px 0 10px;
+        font-size: 30px;
+    }
+    h1{
+        padding: 0 30px 0 0 ;
+
+    }
+    p.duration {
+         float: right;
+        padding: 0 150px 0 0px; 
+        display: block;
+    }
+      
+}
 
 @media (min-width: 390px) {
 
